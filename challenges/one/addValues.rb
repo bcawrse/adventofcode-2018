@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 file = ARGV.first
-input = File.read(file)
+lines = IO.readlines(file, chop: true)
 
-puts "Input from the file:"
-puts input
+lines.each do |line|
+    puts "Updating with line #{line}"
+end
